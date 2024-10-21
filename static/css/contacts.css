@@ -1,0 +1,131 @@
+#form-description {
+    font-weight: 300;
+    font-size: 1.4em;
+}
+#form-description a {
+    color: black;
+}
+#main-heading {
+    text-align: left;
+}
+#contact-form label {
+    display: block;
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+#split-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%
+}
+#context-container {
+    width: 50%;
+    text-align: center;
+}
+#context {
+    max-width: 70%
+}
+#contact-form input {
+    padding: 7px 12px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: 300;
+    background: #f7f7f7;
+    border: none;
+}
+#oneline-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+#message {
+    resize: none;
+    width: calc(100% - 14px);
+    aspect-ratio: 3/1;
+    padding: 7px 12px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: 300;
+    background: #f7f7f7;
+    border: none;
+}
+#submit {
+    color: black;
+    border: none;
+    background-color: var(--accent-color);
+    border-radius: 20px;
+    padding: 7px 40px;
+    font-size: 1.4em;
+    font-weight: 300;
+    font-family: 'Alegreya Sans', sans-serif;
+    margin-top: 10px;
+    cursor: pointer;
+    float: right
+}
+#submit:hover {
+    transition-duration: 0.3s;
+    opacity: 0.8;
+}
+#main-content {
+    position: relative;
+}
+#status-message {
+    position: absolute;
+    right: 10px;
+    height: 30px;
+    bottom: 20px;
+    align-items: center;
+    display: flex;
+    width: fit-content;
+    background: white;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.3);
+}
+#status-message img {
+    aspect-ratio: 1/1;
+    max-height: 100%;
+    margin-right: 15px;
+}
+@media (max-width: 1200px) {
+    #split-container {
+        flex-direction: column;
+    }
+    #context-container {
+        width: 60%;
+    }
+    #status-message {
+        bottom: auto;
+        top: 20px;
+    }
+}
+@media (max-width: 600px) {
+    #main-heading {
+        font-size: 2.3em
+    }
+    #context-container {
+        width: 100%
+    }
+    #oneline-inputs {
+        display: block;
+    }
+    #contact-form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%
+    }
+    #contact-form {
+        max-width: 100%
+    }
+    #context-container {
+        margin-top: 30px;
+    }
+    #context {
+        max-width: 85%
+    }
+}

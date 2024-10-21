@@ -1,0 +1,118 @@
+#articles-container {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+#article-container {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.article {
+    max-width: calc(100% - 40px);
+    width: 700px;
+    height: fit-content;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 20px;
+    padding-bottom: 25px;
+}
+.article-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.article-title {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    margin: 15px 0 0 0;
+}
+.article-date {
+    opacity: 0.8;
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.article-brief {
+    opacity: 0.7;
+    font-weight: 300;
+    font-size: 17px;
+}
+.article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-button {
+    color: black;
+    padding-bottom:2px;
+}
+.article-button:hover {
+    transition-duration: 0.2s;
+    opacity: 0.8;
+}
+#article-title {
+    font-weight: 900;
+    font-size: 2.2em;
+    margin-bottom:0
+}
+#article-info {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#article-date {
+    opacity: 0.8;
+    font-weight: 300;
+}
+#article-readtime {
+    opacity: 0.8;
+    font-weight: 300;
+}
+#article-text {
+    line-height: 130%;
+    font-weight: 300;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 900px;
+    width: 100%;
+}
+#article-text h1 {
+    font-weight: 500;
+    font-size: 1.8em;
+}
+#article-text img {
+    max-width: 90%;
+    padding: 15px;
+}
+pre {
+    width: 80%
+}
+pre code {
+    border-radius: 20px;
+    overflow-x: scroll
+}
+code::-webkit-scrollbar {
+    height: 1em;
+}
+code::-webkit-scrollbar-track {
+    background-color: #f3f3f3;
+}
+code::-webkit-scrollbar-thumb {
+    background-color: #b3b3b3;
+    border-radius: 10px;
+}
+@media (max-width: 350px) {
+    #article-info {
+        width: 100%;
+    }
+}   

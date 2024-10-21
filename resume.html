@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/base.css">
+
+    <link rel="stylesheet" href="static/css/resume.css">
+    <script src="static/js/resume.js"></script>
+
+    <link rel="shortcut icon" href="static/img/favicon.svg" type="image/x-icon">
+    <title>mtwy - resume</title>
+    <script src="https://kit.fontawesome.com/f8281c7f8c.js" crossorigin="anonymous"></script>
+    <script src="static/js/base.js"></script>
+    <meta type="keywords"
+        content="developer, web-developer, python, html, website, web-designer, design, development, programming, django, programmer">
+</head>
+
+<body>
+    <header id="site-header">
+        <div id="site-logo-container">
+            <img src="static/img/logo.svg" alt="logo" class="site-logo">
+        </div>
+        <nav id="site-nav">
+            <ul id="nav-list">
+                <li class="site-page-link" id="me">
+                    <a href="index.html">
+                        me
+                    </a>
+                </li>
+                <li class="site-page-link" id="portfolio">
+                    <a href="portfolio.html">
+                        portfolio
+                    </a>
+                </li>
+                <li class="site-page-link" id="my-resume">
+                    <a href="resume.html">
+                        my resume
+                    </a>
+                </li>
+
+                <li>
+
+
+
+
+
+                    <!--
+                    <form id="lang-form" method="post">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="uoxSCVDvoEhdmnDOrwjQf1d6evXdPBfTk1gEGcrDIgpd9hm9qCiJgrAuAhM0AFRt">
+                        <select id="select-lang">
+                            <option value="en">English</option>
+                            <option value="ru">Russian</option>
+                        </select>
+                    </form>
+                    -->
+                </li>
+            </ul>
+        </nav>
+        <div id="hamburger" onclick="openMenu()">
+            <hr class="line" style="top: 0">
+            <hr class="line" style="top: 32%">
+            <hr class="line" style="bottom: 0">
+        </div>
+    </header>
+    <style>
+        #my-resume {
+            text-decoration: line-through 1px;
+        }
+    </style>
+    <div id="main-content">
+
+        <!--
+<h1 id="main-heading">my resume</h1>
+<p id="resume-info">Last updated: 30.12.2023</p>
+-->
+        <div id="resume">
+            <div id="header">
+                <div id="pfp-wrapper">
+
+                </div>
+                <div id="name-title">
+                    <h1 id="name">
+                        Matvey Kamenev
+                    </h1>
+                    <h2 id="job-title">
+                        Python Developer
+                    </h2>
+                </div>
+            </div>
+            <div id="split-content">
+                <aside id="left-sidebar">
+                    <div id="contacts-block">
+                        <h3 class="block-heading">Info</h3>
+                        <div class="icon-line">
+                            <p>SPB, Russia</p><img src="static/img/pin.png">
+                        </div>
+                        <div class="icon-line">
+                            <p>bruhowich@ya.ru</p><img src="static/img/email.png">
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="education">
+                        <h3 class="block-heading">Education</h3>
+
+                        <p>School №1 of Polazna <span style="font-weight: 400">2012-2021</span><br></p>
+
+                        <p>HSE Lyceum <span style="font-weight: 400">2022-2024</span><br></p>
+
+                        <p>HSE SPB Data&AI <span style="font-weight: 400">2024-</span><br></p>
+                    </div>
+                    <hr>
+                    <div id="hard-skills">
+                        <h3 class="block-heading">Hard Skills</h3>
+
+                        <p class="skill">Django Framework</p>
+                        <div class="skill-level">
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <script>changeColor(document.currentScript.parentNode, 4)</script>
+                        </div>
+
+                        <p class="skill">Python</p>
+                        <div class="skill-level">
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <script>changeColor(document.currentScript.parentNode, 3)</script>
+                        </div>
+
+                        <p class="skill">Databases</p>
+                        <div class="skill-level">
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <script>changeColor(document.currentScript.parentNode, 3)</script>
+                        </div>
+
+                        <p class="skill">Linux</p>
+                        <div class="skill-level">
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <div class="level-circle"></div>
+                            <script>changeColor(document.currentScript.parentNode, 2)</script>
+                        </div>
+
+                    </div>
+                </aside>
+                <div id="content">
+                    <h3 class="block-heading">About me</h3>
+                    <p class="content-text">I am a Junior Python developer with over 2 years of language learning
+                        experience. I consistently practice on Codewars and LeetCode. I have experience working with the
+                        Django framework. I am well-versed in Backend development and have extensive experience in
+                        Frontend development and Web design. I also have an Upper-Intermediate level of proficiency in
+                        the English language.</p>
+                    <h3 class="block-heading">Experience</h3>
+                    <p class="content-text">Not much here yet, but I hope you can help me out with this one!</p>
+                    <h3 class="block-heading">Personal Qualities</h3>
+                    <ul id="qualities">
+
+                        <li class="quality">Communication skills</li>
+
+                        <li class="quality">Responsibility</li>
+
+                        <li class="quality">Thoroughness</li>
+
+                        <li class="quality">Adaptive</li>
+
+                        <li class="quality">Easy to learn</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+#context-img {
+    width: 600px;
+    max-width: 90%;
+
+}
+#context-img:hover {
+    animation: float 6s ease-in-out infinite;
+}
+.main-heading {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3em;
+    margin-bottom: 0.2em;
+}
+.main-text {
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+.main-text a {
+    color: black;
+}
+.main-text a:hover {
+    opacity: 0.7;
+    transition-duration: 0.3s;
+}
+.main-text-container {
+    flex: 1;
+    width: 50%;
+}
+.context-container {
+    text-align: center;
+    max-width: 50%;
+    flex: 1
+}
+.div-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 5vh;
+}
+.cta {
+  position: relative;
+  padding: 19px 22px;
+  transition: all .2s ease;
+  color: black;
+  font-family: 'Alegreya Sans', sans-serif;
+  text-decoration: none;
+}
+.cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: var(--accent-color);
+    width: 56px;
+    height: 56px;
+    transition: all .3s ease;
+}
+.cta span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: black;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all .3s ease;
+}
+.cta:hover::before {
+    width: 100%;
+}
+.cta:hover svg {
+    transform: translateX(0)
+}
+.portfolio-link {
+    margin-top: 20px;
+    display: flex;
+}
+.block-line {
+    margin-top: 5vh;
+}
+#cards-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.card {
+    max-width: 90%;
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-15px) translatex(5px);
+        rotate: -5deg
+	}
+	75% {
+		transform: translatey(-10px) translatex(-5px);
+        rotate: 2.5deg
+	}
+	100% {
+		transform: translatey(0px) translatex(0px);
+        rotate: 0deg
+	}
+}
+@media (max-width: 800px) {
+    #main-content {
+        margin-left: 20px;
+        width: calc(100% - 40px);
+    }
+    .div-row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .portfolio-link {
+        justify-content: center;
+    }
+    .main-text-container {
+        width: 100%
+    }
+    .context-container {
+        max-width: 100%;
+        width: 100%;
+    }
+}

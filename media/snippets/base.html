@@ -1,0 +1,100 @@
+{%load static%}
+{%load i18n%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/base.css'%}">
+    {% block additional %}
+    
+    {%endblock%}
+    <link rel="shortcut icon" href="{% static 'img/favicon.svg' %}" type="image/x-icon">
+    <title>mtwy - {%block title%}{%endblock%}</title>
+    <script src="https://kit.fontawesome.com/f8281c7f8c.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/base.js' %}"></script>
+    <meta type="keywords" content="developer, web-developer, python, html, website, web-designer, design, development, programming, django, programmer">
+</head>
+<body>
+    <header id="site-header">
+        <div id="site-logo-container">
+            <img src="{%static 'img/logo.svg'%}" alt="logo" class="site-logo">
+        </div>
+        <nav id="site-nav">
+            <ul id="nav-list">
+                <li class="site-page-link" id="me">
+                    <a href="{% url 'me' %}">
+                        {%trans "me"%}
+                    </a>
+                </li>
+                <li class="site-page-link" id="portfolio">
+                    <a href="{% url 'portfolio' %}">
+                        {%trans "portfolio"%}
+                    </a>
+                </li>
+                <li class="site-page-link" id="blog">
+                    <a href="{% url 'blog' %}">
+                        {%trans "blog"%}
+                    </a>
+                </li>
+                <li class="site-page-link" id="contacts">
+                    <a href="{% url 'contacts'%}">
+                        {%trans "contacts"%}
+                    </a>
+                </li>
+                <li class="site-page-link" id="my-resume">
+                    <a href="{% url 'resume' %}">
+                        {%trans "my resume"%}
+                    </a>
+                </li>
+                {%if user.is_superuser%}
+                <li class="site-page-link" id="snippets">
+                    <a href="{% url 'snippets' %}">
+                        CSV
+                    </a>
+                </li>
+                {%endif%}
+                <li>
+                    {%with request.LANGUAGE_CODE as user_language%}
+                    {%if user_language == "en"%}
+                    <form id="lang-form" method="post" action="{%url 'change-language'%}">
+                        {%csrf_token%}
+                        <button id="en-button" name="change-to-ru" class="lang-button">{%trans "English"%}</button>
+                    </form>
+                    {%elif user_language == "ru"%}
+                    <form id="lang-form" method="post" action="{%url 'change-language'%}">
+                        {%csrf_token%}
+                        <button id="ru-button" name="change-to-en" class="lang-button">{%trans "Russian"%}</button>
+                    </form>
+                    {%endif%}
+                    {%endwith%}
+                    <!--
+                    <form id="lang-form" method="post">
+                        {%csrf_token%}
+                        <select id="select-lang">
+                            <option value="en">{%trans "English"%}</option>
+                            <option value="ru">{%trans "Russian"%}</option>
+                        </select>
+                    </form>
+                    -->
+                </li>
+            </ul>
+        </nav>
+        <div id="hamburger" onclick="openMenu()">
+            <hr class="line" style="top: 0">
+            <hr class="line" style="top: 32%">
+            <hr class="line" style="bottom: 0">
+        </div>
+    </header>
+    <style>
+        #{%block active%}{%endblock%} {
+            text-decoration: line-through 1px;
+        }
+    </style>
+    <div id="main-content">
+        {%block content%}
+        {%endblock%}
+    </div>
+    </body>
+    </html>

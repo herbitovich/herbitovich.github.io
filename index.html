@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/base.css">
+
+    <link rel="stylesheet" href="static/css/me.css">
+    <link rel="stylesheet" href="static/css/work.css">
+    <script defer src="static/js/pop.js"></script>
+
+    <link rel="shortcut icon" href="static/img/favicon.svg" type="image/x-icon">
+    <title>mtwy - me</title>
+    <script src="https://kit.fontawesome.com/f8281c7f8c.js" crossorigin="anonymous"></script>
+    <script src="static/js/base.js"></script>
+    <meta type="keywords"
+        content="developer, web-developer, python, html, website, web-designer, design, development, programming, django, programmer">
+</head>
+
+<body>
+    <header id="site-header">
+        <div id="site-logo-container">
+            <img src="static/img/logo.svg" alt="logo" class="site-logo">
+        </div>
+        <nav id="site-nav">
+            <ul id="nav-list">
+                <li class="site-page-link" id="me">
+                    <a href="index.html">
+                        me
+                    </a>
+                </li>
+                <li class="site-page-link" id="portfolio">
+                    <a href="portfolio.html">
+                        portfolio
+                    </a>
+                </li>
+                <li class="site-page-link" id="my-resume">
+                    <a href="resume.html">
+                        my resume
+                    </a>
+                </li>
+
+                <li>
+
+
+
+
+
+                    <!--
+                    <form id="lang-form" method="post">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="HEKH94M2Zre4QIYoqUfaRWdjocrwkm9AxhttdlAaj3m4DCHJp0e3SmAHKYgj5qLa">
+                        <select id="select-lang">
+                            <option value="en">English</option>
+                            <option value="ru">Russian</option>
+                        </select>
+                    </form>
+                    -->
+                </li>
+            </ul>
+        </nav>
+        <div id="hamburger" onclick="openMenu()">
+            <hr class="line" style="top: 0">
+            <hr class="line" style="top: 32%">
+            <hr class="line" style="bottom: 0">
+        </div>
+    </header>
+    <style>
+        #me {
+            text-decoration: line-through 1px;
+        }
+    </style>
+    <div id="main-content">
+
+        <div id="overlay"></div>
+        <div id="pop">
+            <div id="x-mark" onclick="popupClose()"></div>
+            <div id="pop-row">
+                <div id="text-part">
+                    <div id="fixed">
+                        <div id="pop-title">
+                            <h2 id="pop-heading"></h2>
+                            <div id="pop-icon-container">
+                                <img id="pop-icon" src="">
+                            </div>
+                        </div>
+                        <div id="pop-properties-container">
+                            <ul id="pop-properties-list">
+                                <li class="pop-property">Category: <span id="pop-category"></span></li>
+                                <li class="pop-property">Date: <span id="pop-date"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="pop-description-container">
+                        <p id="pop-description"></p>
+                        <p id="file-description">You can download the files right <a id="file-download"
+                                href="">here.</a></p>
+                    </div>
+                </div>
+                <div id="frame-part">
+                    <iframe id="frame" scrolling="no">
+                    </iframe>
+                    <a id="play-button">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="div-row">
+            <div class="main-text-container">
+                <h2 class="main-heading">who am i?</h2>
+                <p class="main-text">The name's Matvey Kamenev. <br>I'm a Frontend (JavaScript included) and Backend
+                    (using PHP, Django) web-developer with more than three years of experience & Python developer for
+                    nearly two years. Also trying myself in web design and never planning to stop learning something new
+                    in IT. Currently based in SPB, Russia.<br>All job offers are welcome!</p>
+                <h2 class="main-heading">where are you?</h2>
+                <p class="main-text">Glad to see you on my portfolio website. Here I post the projects I've worked on
+                    and some other activities related to my developing career. Check my works out right <a
+                        href="portfolio.html">here</a>.<br>
+            </div>
+            <div class="context-container">
+
+            </div>
+        </div>
+        <div class="portfolio-link">
+            <a href="portfolio.html" class="cta">
+                <span>GO TO PORTFOLIO</span>
+                <svg width="13px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+            </a>
+        </div>
+        <hr class="block-line">
+        <div class="div-row">
+            <div class="main-text-container">
+                <h2 class="main-heading">most recent projects</h2>
+                <p class="main-text">Usually I want to finish each of my projects within a month, including the time to
+                    design it in Figma. In order to make it in time, I leave some of the project's features
+                    oversimplified. But if I find some technologies that can be integrated into the project interesting
+                    and challenging to work with as I've never done it before, then it may take a bit longer. So pay
+                    closer attention to the projects that took several months, I've really polished them all over and
+                    used some interesting stuff that I got to learn specifically for the project!</p>
+            </div>
+            <div class="context-container">
+                <div id="cards-container">
+
+                    <div class="card Project-card" onclick="popup(this)" data-title='CLI Python Password Manager'
+                        data-description="Really simple single-file Python password manager. This small project greatly improved my understanding of several complex topics, such as hashing, salting, encryption, and decryption in cryptography; introduced me to  a bunch of both symmetric and assymetric key encryption algorithms. To be honest, the hardest part about the project was doing the research rather than implementing the idea in code."
+                        data-untransCategory="Project" data-category="Project" data-date="April 2024"
+                        data-icon="media/works/lock.jpg" data-url="None" data-file="media/files/manager.py">
+                        <div class="card-title">
+                            <h2 class="card-heading">CLI Python Password Manager</h2>
+                            <div class="icon-container">
+                                <img class="icon" src=media/works/lock.jpg>
+                            </div>
+                        </div>
+                        <div class="properties-list-container">
+                            <ul class="properties-list">
+                                <li class="property">Category: <span>Project</span></li>
+                                <li class="property">Date: <span>April 2024</span></li>
+                            </ul>
+                        </div>
+                        <div class="description-container">
+                            <p class="description">Really simple single-file Python password manager. This small project
+                                greatly improved my understanding of several complex topics, such as hashing, salting,
+                                encryption, and decryption in cryptography;...</p>
+                        </div>
+                    </div>
+
+                    <div class="card Contest-card" onclick="popup(this)" data-title='"Vishiy Pilotazh" Contest'
+                        data-description="The All-Russian Competition of Research Works of Schoolchildren Vishiy Pilotazh in the field of Computer Science, with both online and offline stages. The comptetition improved some of my soft skills, including public speaking, and also various hard skills in the cyber security field."
+                        data-untransCategory="Contest" data-category="Contest" data-date="April 2024"
+                        data-icon="media/works/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%9D%D0%98%D0%A3_%D0%92%D0%A8%D0%AD.png"
+                        data-url="None" data-file="media/files/Kamenev_CS.zip">
+                        <div class="card-title">
+                            <h2 class="card-heading">"Vishiy Pilotazh" Contest</h2>
+                            <div class="icon-container">
+                                <img class="icon"
+                                    src=media/works/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%9D%D0%98%D0%A3_%D0%92%D0%A8%D0%AD.png>
+                            </div>
+                        </div>
+                        <div class="properties-list-container">
+                            <ul class="properties-list">
+                                <li class="property">Category: <span>Contest</span></li>
+                                <li class="property">Date: <span>April 2024</span></li>
+                            </ul>
+                        </div>
+                        <div class="description-container">
+                            <p class="description">The All-Russian Competition of Research Works of Schoolchildren
+                                Vishiy Pilotazh in the field of Computer Science, with both online and offline stages.
+                                The comptetition improved some of my soft skills,...</p>
+                        </div>
+                    </div>
+
+                    <div class="card Project-card" onclick="popup(this)" data-title='wappalyzerLocal' data-description="Python tool for local headless detection of websites' technology stacks using the Wappalyzer browser extension for Chrome simulated in Selenium.
+Technologies used: Django Framework, Selenium, XVFB, SQLite" data-untransCategory="Project" data-category="Project"
+                        data-date="March 2024" data-icon="media/works/mark-dark.png"
+                        data-url="https://github.com/herbitovich/wappalyzerLocal">
+                        <div class="card-title">
+                            <h2 class="card-heading">wappalyzerLocal</h2>
+                            <div class="icon-container">
+                                <img class="icon" src=media/works/mark-dark.png>
+                            </div>
+                        </div>
+                        <div class="properties-list-container">
+                            <ul class="properties-list">
+                                <li class="property">Category: <span>Project</span></li>
+                                <li class="property">Date: <span>March 2024</span></li>
+                            </ul>
+                        </div>
+                        <div class="description-container">
+                            <p class="description">Python tool for local headless detection of websites&#x27; technology
+                                stacks using the Wappalyzer browser extension for Chrome simulated in Selenium.
+                                Technologies used: Django Framework, Selenium, XVFB, S...</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+</body>
+
+</html>

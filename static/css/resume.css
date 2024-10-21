@@ -1,0 +1,125 @@
+#resume-info {
+    font-weight: 300;
+    font-size: 1.4em;
+}
+#main-heading {
+    text-align: left;
+}
+#resume {
+    width: 95%;
+}
+#header {
+    display: flex;
+    gap: 5%;
+
+}
+#pfp-wrapper {
+    justify-self: flex-start;
+    width: 500px;
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    background: #ffda4d;
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+    max-width: 30%;
+}
+#pfp {
+    max-height: 300px;
+    border-radius: 50%;
+    max-width: 90%;
+}
+#name-title {
+    justify-self: center;
+    height: 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+#name {
+    font-weight: 100;
+    font-size: 4em;
+    margin-bottom: 0;
+    line-height: 90%;
+}
+#job-title {
+    margin-top: 15px;
+    font-weight: 300;
+    font-size: 1.8em
+}
+#split-content {
+    display: flex;
+    margin-top: 5%;
+    gap: 5%;
+}
+#left-sidebar {
+    width: 500px;
+    max-width: 30%;
+    border-right: 1px solid #e9e9e9;
+}
+#left-sidebar hr {
+    margin-top: 15px;
+    border: none;
+    height: 1px;
+    width: 90%;
+    background: #e9e9e9;
+}
+.icon-line {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    gap: 7px;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+.icon-line img {
+    width: 32px;
+    height: 32px;
+}
+.skill {
+    font-size: 1.2em;
+    font-weight: 300; 
+}
+.block-heading {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.skill-level {
+    display: flex;
+    gap: 4px;
+}
+.level-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgb(39, 39, 39)
+}
+#education p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+.content-text {
+    font-size: 1.2em;
+    font-weight: 300
+}
+.quality {
+    font-weight: 300;
+    font-size: 1.2em
+}
+@media (max-width: 800px) {
+    #header {
+        flex-direction: column
+    }
+    #pfp-wrapper {
+        max-width: 100%
+    }
+    #name-title {
+        margin-left: 0
+    }
+    #split-content {
+        flex-direction: column
+    }
+    #left-sidebar {
+        width: 100%;
+        border: none;
+        max-width: 100%;
+    }
+}

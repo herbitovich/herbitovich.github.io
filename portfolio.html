@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/base.css">
+
+    <link rel="stylesheet" href="static/css/portfolio.css">
+    <link rel="stylesheet" href="static/css/work.css">
+    <script defer src="static/js/pop.js"></script>
+
+    <link rel="shortcut icon" href="static/img/favicon.svg" type="image/x-icon">
+    <title>mtwy - portfolio</title>
+    <script src="https://kit.fontawesome.com/f8281c7f8c.js" crossorigin="anonymous"></script>
+    <script src="static/js/base.js"></script>
+    <meta type="keywords"
+        content="developer, web-developer, python, html, website, web-designer, design, development, programming, django, programmer">
+</head>
+
+<body>
+    <header id="site-header">
+        <div id="site-logo-container">
+            <img src="static/img/logo.svg" alt="logo" class="site-logo">
+        </div>
+        <nav id="site-nav">
+            <ul id="nav-list">
+                <li class="site-page-link" id="me">
+                    <a href="index.html">
+                        me
+                    </a>
+                </li>
+                <li class="site-page-link" id="portfolio">
+                    <a href="portfolio.html">
+                        portfolio
+                    </a>
+                </li>
+                <li class="site-page-link" id="my-resume">
+                    <a href="resume.html">
+                        my resume
+                    </a>
+                </li>
+
+                <li>
+
+
+
+
+
+                    <!--
+                    <form id="lang-form" method="post">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="vYou7HvxBnkXZXJC9W9S8zEOQuHiqcT1lB7gbYjFVZsXMRsX828L9Z1ccgw5bgvB">
+                        <select id="select-lang">
+                            <option value="en">English</option>
+                            <option value="ru">Russian</option>
+                        </select>
+                    </form>
+                    -->
+                </li>
+            </ul>
+        </nav>
+        <div id="hamburger" onclick="openMenu()">
+            <hr class="line" style="top: 0">
+            <hr class="line" style="top: 32%">
+            <hr class="line" style="bottom: 0">
+        </div>
+    </header>
+    <style>
+        #portfolio {
+            text-decoration: line-through 1px;
+        }
+    </style>
+    <div id="main-content">
+
+        <div id="overlay"></div>
+        <div id="pop">
+            <div id="x-mark" onclick="popupClose()"></div>
+            <div id="pop-row">
+                <div id="text-part">
+                    <div id="fixed">
+                        <div id="pop-title">
+                            <h2 id="pop-heading"></h2>
+                            <div id="pop-icon-container">
+                                <img id="pop-icon" src="">
+                            </div>
+                        </div>
+                        <div id="pop-properties-container">
+                            <ul id="pop-properties-list">
+                                <li class="pop-property">Category: <span id="pop-category"></span></li>
+                                <li class="pop-property">Date: <span id="pop-date"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="pop-description-container">
+                        <p id="pop-description"></p>
+                        <p id="file-description">You can download the files right <a id="file-download"
+                                href="">here.</a></p>
+                    </div>
+                </div>
+                <div id="frame-part">
+                    <iframe id="frame" scrolling="no">
+                    </iframe>
+                    <a id="play-button">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <h1 id="main-heading">portfolio</h1>
+        <div id="cards-container">
+
+            <div class="card Project-card" onclick="popup(this)" data-title='CLI Python Password Manager'
+                data-description="Really simple single-file Python password manager. This small project greatly improved my understanding of several complex topics, such as hashing, salting, encryption, and decryption in cryptography; introduced me to  a bunch of both symmetric and assymetric key encryption algorithms. To be honest, the hardest part about the project was doing the research rather than implementing the idea in code."
+                data-untransCategory="Project" data-category="Project" data-date="April 2024"
+                data-icon="media/works/lock.jpg" data-url="None" data-file="media/files/manager.py">
+                <div class="card-title">
+                    <h2 class="card-heading">CLI Python Password Manager</h2>
+                    <div class="icon-container">
+                        <img class="icon" src=media/works/lock.jpg>
+                    </div>
+                </div>
+                <div class="properties-list-container">
+                    <ul class="properties-list">
+                        <li class="property">Category: <span>Project</span></li>
+                        <li class="property">Date: <span>April 2024</span></li>
+                    </ul>
+                </div>
+                <div class="description-container">
+                    <p class="description">Really simple single-file Python password manager. This small project greatly
+                        improved my understanding of several complex topics, such as hashing, salting, encryption, and
+                        decryption in cryptography;...</p>
+                </div>
+            </div>
+
+            <div class="card Contest-card" onclick="popup(this)" data-title='"Vishiy Pilotazh" Contest'
+                data-description="The All-Russian Competition of Research Works of Schoolchildren Vishiy Pilotazh in the field of Computer Science, with both online and offline stages. The comptetition improved some of my soft skills, including public speaking, and also various hard skills in the cyber security field."
+                data-untransCategory="Contest" data-category="Contest" data-date="April 2024"
+                data-icon="media/works/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%9D%D0%98%D0%A3_%D0%92%D0%A8%D0%AD.png"
+                data-url="None" data-file="media/files/Kamenev_CS.zip">
+                <div class="card-title">
+                    <h2 class="card-heading">"Vishiy Pilotazh" Contest</h2>
+                    <div class="icon-container">
+                        <img class="icon"
+                            src=media/works/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%9D%D0%98%D0%A3_%D0%92%D0%A8%D0%AD.png>
+                    </div>
+                </div>
+                <div class="properties-list-container">
+                    <ul class="properties-list">
+                        <li class="property">Category: <span>Contest</span></li>
+                        <li class="property">Date: <span>April 2024</span></li>
+                    </ul>
+                </div>
+                <div class="description-container">
+                    <p class="description">The All-Russian Competition of Research Works of Schoolchildren Vishiy
+                        Pilotazh in the field of Computer Science, with both online and offline stages. The comptetition
+                        improved some of my soft skills,...</p>
+                </div>
+            </div>
+
+            <div class="card Project-card" onclick="popup(this)" data-title='wappalyzerLocal' data-description="Python tool for local headless detection of websites' technology stacks using the Wappalyzer browser extension for Chrome simulated in Selenium.
+Technologies used: Django Framework, Selenium, XVFB, SQLite" data-untransCategory="Project" data-category="Project"
+                data-date="March 2024" data-icon="media/works/mark-dark.png"
+                data-url="https://github.com/herbitovich/wappalyzerLocal">
+                <div class="card-title">
+                    <h2 class="card-heading">wappalyzerLocal</h2>
+                    <div class="icon-container">
+                        <img class="icon" src=media/works/mark-dark.png>
+                    </div>
+                </div>
+                <div class="properties-list-container">
+                    <ul class="properties-list">
+                        <li class="property">Category: <span>Project</span></li>
+                        <li class="property">Date: <span>March 2024</span></li>
+                    </ul>
+                </div>
+                <div class="description-container">
+                    <p class="description">Python tool for local headless detection of websites&#x27; technology stacks
+                        using the Wappalyzer browser extension for Chrome simulated in Selenium.
+                        Technologies used: Django Framework, Selenium, XVFB, S...</p>
+                </div>
+            </div>
+
+            <div class="card Project-card" onclick="popup(this)" data-title='CLI Python Game'
+                data-description="A Command Line Interface endless game, made with Python 3.11.  This little project took me several days of coding, but turned out to be a great opportunity to learn more about OOP in general,  datatypes, debugging process, etc. Works on both Windows and Linux, but should be ran with sudo-privileges on latter because of the keyboard library's requirements."
+                data-untransCategory="Project" data-category="Project" data-date="February 2024"
+                data-icon="media/works/game.png" data-url="None" data-file="media/files/Game.zip">
+                <div class="card-title">
+                    <h2 class="card-heading">CLI Python Game</h2>
+                    <div class="icon-container">
+                        <img class="icon" src=media/works/game.png>
+                    </div>
+                </div>
+                <div class="properties-list-container">
+                    <ul class="properties-list">
+                        <li class="property">Category: <span>Project</span></li>
+                        <li class="property">Date: <span>February 2024</span></li>
+                    </ul>
+                </div>
+                <div class="description-container">
+                    <p class="description">A Command Line Interface endless game, made with Python 3.11. This little
+                        project took me several days of coding, but turned out to be a great opportunity to learn more
+                        about OOP in general, datatyp...</p>
+                </div>
+            </div>
+
+            <div class="card Contest-card" onclick="popup(this)" data-title='PROSP 2023'
+                data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel eros eget dui sollicitudin mollis. Sed maximus purus ut turpis tincidunt, sit amet aliquet purus tempus. Duis laoreet leo sit amet ligula efficitur fringilla. Maecenas quis condimentum diam, et efficitur sem. Vestibulum porttitor dui ut ipsum mattis, ut maximus eros tempus. Aenean nec orci elit. Quisque at consectetur tellus. Proin luctus leo non aliquam ornare. Praesent rutrum convallis sem, auctor ornare risus aliquam eu."
+                data-untransCategory="Contest" data-category="Contest" data-date="November 2023"
+                data-icon="media/works/trophy.png" data-url="None">
+                <div class="card-title">
+                    <h2 class="card-heading">PROSP 2023</h2>
+                    <div class="icon-container">
+                        <img class="icon" src=media/works/trophy.png>
+                    </div>
+                </div>
+                <div class="properties-list-container">
+                    <ul class="properties-list">
+                        <li class="property">Category: <span>Contest</span></li>
+                        <li class="property">Date: <span>November 2023</span></li>
+                    </ul>
+                </div>
+                <div class="description-container">
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel eros eget dui
+                        sollicitudin mollis. Sed maximus purus ut turpis tincidunt, sit amet aliquet purus tempus. Duis
+                        laoreet leo sit amet ligul...</p>
+                </div>
+            </div>
+
+            <div class="card Project-card" onclick="popup(this)" data-title='"PKU" Online Shop'
+                data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                data-untransCategory="Project" data-category="Project" data-date="September 2023"
+                data-icon="media/works/favicon_ZmcaVRy_4zHgsBq.png" data-url="http://ekipirovkapku.ru">
+                <div class="card-title">
+                    <h2 class="card-heading">"PKU" Online Shop</h2>
+                    <div class="icon-container">
+                        <img class="icon" src=media/works/favicon_ZmcaVRy_4zHgsBq.png>
+                    </div>
+                </div>
+                <div class="properties-list-container">
+                    <ul class="properties-list">
+                        <li class="property">Category: <span>Project</span></li>
+                        <li class="property">Date: <span>September 2023</span></li>
+                    </ul>
+                </div>
+                <div class="description-container">
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut a...</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
